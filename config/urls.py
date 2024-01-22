@@ -21,5 +21,6 @@ admin.site.site_header = 'Password Manager Administration'
 
 urlpatterns = [
     path('', include('home.urls')),
+    path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
 ]
