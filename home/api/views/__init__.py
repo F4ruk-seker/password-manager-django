@@ -1,2 +1,4 @@
 from .list_passwords_view import PasswordsListView
+from .password_retrieve_update_destroy_view import PasswordRetrieveUpdateDestroyAPIView
+from .password_create_view import PasswordCreateView
 

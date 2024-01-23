@@ -49,44 +49,45 @@ class LoginForm(AuthenticationForm):
 class UpdatePasswordForm(forms.ModelForm):
     class Meta:
         model = UserPassword
-        fields = ['id', 'username', 'password', 'application_type', 'website_name', 'website_url', 'application_name',
-                  'game_name', 'game_developer']
-
-        widgets = {
-            'username': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'Username'
-            }),
-            'password': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'password'
-            }),
-            'application_type': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'application type',
-                'readonly': 'readonly',
-            }),
-            'website_name': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'website name',
-            }),
-            'website_url': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'website url',
-            }),
-            'application_name': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'application name',
-            }),
-            'game_name': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'game name',
-            }),
-            'game_developer': forms.TextInput(attrs={
-                'class': 'form-control',
-                'placeholder': 'game developer',
-            }),
-        }
+        fields = '__all__'
+        # fields = ['id', 'username', 'password', 'application_type', 'website_name', 'website_url', 'application_name',
+        #           'game_name', 'game_developer']
+        #
+        # widgets = {
+        #     'username': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'Username'
+        #     }),
+        #     'password': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'password'
+        #     }),
+        #     'application_type': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'application type',
+        #         'readonly': 'readonly',
+        #     }),
+        #     'website_name': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'website name',
+        #     }),
+        #     'website_url': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'website url',
+        #     }),
+        #     'application_name': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'application name',
+        #     }),
+        #     'game_name': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'game name',
+        #     }),
+        #     'game_developer': forms.TextInput(attrs={
+        #         'class': 'form-control',
+        #         'placeholder': 'game developer',
+        #     }),
+        # }
 
     def clean(self):
         cleaned_data = super().clean()

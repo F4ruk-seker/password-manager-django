@@ -12,9 +12,11 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import ast
 import os
+from cloudinary import Config
 from datetime import timedelta
 from pathlib import Path
 import environ
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
