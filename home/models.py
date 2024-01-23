@@ -10,7 +10,6 @@ class UserPassword(models.Model):
     username: models.CharField = models.CharField(max_length=100, default=None, blank=True, null=True)
     email: models.CharField = models.CharField(max_length=100, default=None, blank=True, null=True)
     password: models.CharField = models.CharField(max_length=500)
-    application_type: models.CharField = models.CharField(max_length=30)
 
     # bool
     favorite: models.BooleanField = models.BooleanField(default=False)
